@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>10 Second Math Game</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
+  </head>
+  <body>
+    <div class="container"> 
+      <div class="row bg-secondary">
+        <div class="col-md-12">
+          <div class="card card-white">
+            <div id="game-container" class="card-body text-center text-light bg-dark rounded">
+              <h1 class="card-title">Ten-Second Math Game</h1>
+              <section id="game-information" class="centered-box m-3 rounded">
+                <div class="text-left m-3 p-3">
+                  <h2>Welcome to a Ten-Second Math Game</h2>
+                  <p>This game will challenge your math skills against the clock.</p>
+                  <p>The clock starts with 10 seconds.</p>
+                  <p>For each correct answer, 1 second will be added to the clock.</p>
+                  <p>You can select the four different operators and the maximum number you want to play with.</p>
+                  <p>The game is over when the clock runs out.</p>
+                  <p>Good luck and have fun!</p>
+                </div>
+                <div>
+                  <button id="play" class="btn btn-primary m-3">Play Game</button>
+                </div>
+              </section>
+              <section id="game-board" class="centered-box rounded">
+                <div>
+                  <span id="clock">10</span> seconds left
+                </div>
+                <div>
+                  <span class="highlight-span" id="question"></span>
+                </div>
+                <div>
+                  <acronym title="Click enter">
+                    <input id="answer" placeholder="answer" >
+                  </acronym>
+                </div>
+              </section>
+              <section id="game-options" class="centered-box rounded m-3">
+                <h2>Game Options</h2>
+                <div>
+                  <label for="number-limit-range">Number Limit: <span id="number-limit">10</span></label>
+                  <input id="number-limit-range" type="range" min="10" max="100" value="10" step="10" />
+                </div>
+                <div>
+                  <h3>Operators</h3>
+                  <div id="operators" class="row justify-content-center">
+                    <div class="operator-box col-2">
+                      <input type="checkbox" id="addition" class="option-box" checked="true">
+                      <p class="op-text">&#43;</p>
+                    </div>
+                    <div class="operator-box col-2">
+                      <input type="checkbox" id="substraction" class="option-box">
+                      <p class="op-text">&#45;</p>
+                    </div><br>
+                    <div class="operator-box col-2">
+                      <input type="checkbox" id="multiplication" class="option-box">
+                      <p class="op-text">&#215;</p>
+                    </div>
+                    <div class="operator-box col-2">
+                      <input type="checkbox" id="division" class="option-box">
+                      <p class="op-text">&#247;</p>
+                    </div>
+                  </div>
+                  <button id="start" class="btn btn-info m-3">Start Game</button>
+                </div>
+              </section>
+              <section id="results" class="centered-box rounded m-3">
+                <div><img id="game-over-img" src="images/game-over.png" alt=""></div>
+                <div>
+                  <h3>You scored&nbsp</h3><h3 id="score"></h3><h3 id="score">&nbsppoints!</h3>
+                </div>
+                <div>
+                  <button id="play-again" class="btn btn-secondary m-3">Play again</button>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+    <!-- Optional JavaScript -->
+  </body>
+</html>
