@@ -66,6 +66,9 @@ function timer() {
     clock.innerHTML = counter;
     timeoutId = setTimeout(callbackFunction, 1000);
     counter -= 1;
+    if (counter < 3){
+      clock.style.color = "red";
+    }
     if (counter < 0) {
     clearTimeout(timeoutId);
     gameBoard.classList.add('d-none');
@@ -101,7 +104,7 @@ function checkResult(upperLimit) {
     setScore()
     activeScore.innerHTML = scoreAchieved;
     setNewQuestion(upperLimit.value)
-    answer.style.color = "green";
+    answer.style.color = "black";
   } else {
     answer.style.color = "red";
   }
@@ -137,6 +140,7 @@ function startGame() {
     results.classList.add('d-none');;
     scoreAchieved = 0;
     activeScore.innerHTML = scoreAchieved;
+    clock.style.color = "white";
   }
 }
 
