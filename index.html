@@ -12,9 +12,9 @@
   </head>
   <body>
     <div class="container"> 
-      <div class="row bg-secondary">
+      <div class="row bg-secondary rounded">
         <div class="col-md-12">
-          <div class="card card-white">
+          <div class="card card-white rounded">
             <div id="game-container" class="card-body text-center text-light bg-dark rounded">
               <h1 class="card-title">Ten-Second Math Game</h1>
               <section id="game-information" class="centered-box m-3 rounded">
@@ -23,7 +23,7 @@
                   <p>This game will challenge your math skills against the clock.</p>
                   <p>The clock starts with 10 seconds.</p>
                   <p>For each correct answer, 1 second will be added to the clock.</p>
-                  <p>You can select the four different operators and the maximum number you want to play with.</p>
+                  <p>You can select one to four different operators and the maximum number you want to play with.</p>
                   <p>The game is over when the clock runs out.</p>
                   <p>Good luck and have fun!</p>
                 </div>
@@ -31,7 +31,7 @@
                   <button id="play" class="btn btn-primary m-3">Play Game</button>
                 </div>
               </section>
-              <section id="game-board" class="centered-box rounded">
+              <section id="game-board" class="centered-box rounded d-none">
                 <div>
                   <span id="clock">10</span> seconds left
                 </div>
@@ -39,16 +39,22 @@
                   <span class="highlight-span" id="question"></span>
                 </div>
                 <div>
-                  <acronym title="Click enter">
+                  <acronym title="Press enter">
                     <input id="answer" placeholder="answer" >
                   </acronym>
                 </div>
-              </section>
-              <section id="game-options" class="centered-box rounded m-3">
-                <h2>Game Options</h2>
                 <div>
-                  <label for="number-limit-range">Number Limit: <span id="number-limit">10</span></label>
-                  <input id="number-limit-range" type="range" min="10" max="100" value="10" step="10" />
+                  <h3>You have&nbsp</h3><h3 id="active-score"></h3><h3>&nbsppoints!</h3>
+                </div>
+              </section>
+              <section id="game-options" class="centered-box rounded m-3 d-none">
+                <h2>Game Options</h2>
+                <div class="my-3">
+                  <label for="number-limit-range">Number Limit: <span id="number-limit">10</span>
+                    </br>
+                    <input id="number-limit-range" type="range" min="10" max="100" value="10" step="10" />
+                  </label>
+                  
                 </div>
                 <div>
                   <h3>Operators</h3>
@@ -73,13 +79,13 @@
                   <button id="start" class="btn btn-info m-3">Start Game</button>
                 </div>
               </section>
-              <section id="results" class="centered-box rounded m-3">
-                <div><img id="game-over-img" src="images/game-over.png" alt=""></div>
+              <section id="results" class="centered-box rounded m-3 d-none">
+                <div><img id="game-over-img" src="images/game-over.png" class="img-fluid" alt=""></div>
                 <div>
                   <h3>You scored&nbsp</h3><h3 id="score"></h3><h3 id="score">&nbsppoints!</h3>
                 </div>
                 <div>
-                  <button id="play-again" class="btn btn-secondary m-3">Play again</button>
+                  <button id="play-again" class="btn btn-secondary m-3 d-none">Play again</button>
                 </div>
               </section>
             </div>
@@ -88,10 +94,10 @@
       </div>
     </div>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery first, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
     <!-- Optional JavaScript -->
+    <script src="js/game.js"></script>
   </body>
 </html>
