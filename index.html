@@ -19,12 +19,12 @@
               <h1 class="card-title">Ten-Second Math Game</h1>
               <section id="game-information" class="centered-box m-3 rounded">
                 <div class="text-left m-3 p-3">
-                  <h2>Welcome to a Ten-Second Math Game</h2>
-                  <p>This game will challenge your math skills against the clock.</p>
-                  <p>The clock starts with 10 seconds.</p>
-                  <p>For each correct answer, 1 second will be added to the clock.</p>
+                  <h2>Welcome!</h2>
+                  <p>This game will challenge your math skills against a timer.</p>
+                  <p>The timer starts with 10 seconds.</p>
+                  <p>For each correct answer, 1 second will be added the timer.</p>
                   <p>You can select one to four different operators and the maximum number you want to play with.</p>
-                  <p>The game is over when the clock runs out.</p>
+                  <p>The game ends when the timer runs out.</p>
                   <p>Good luck and have fun!</p>
                 </div>
                 <div>
@@ -32,18 +32,20 @@
                 </div>
               </section>
               <section id="game-board" class="centered-box rounded d-none">
-                <div>
-                  <span id="clock">10</span> seconds left
+                <div class="my-3">
+                  <span id="clock">10</span> 
+                  </br>
+                  seconds left
                 </div>
-                <div>
-                  <span class="highlight-span" id="question"></span>
+                <div class="my-2">
+                  <span id="question"></span>
                 </div>
                 <div>
                   <acronym title="Press enter">
                     <input id="answer" placeholder="answer" >
                   </acronym>
                 </div>
-                <div>
+                <div class="my-3">
                   <h3>You have&nbsp</h3><h3 id="active-score"></h3><h3>&nbsppoints!</h3>
                 </div>
               </section>
@@ -82,7 +84,7 @@
               <section id="results" class="centered-box rounded m-3 d-none">
                 <div><img id="game-over-img" src="images/game-over.png" class="img-fluid" alt=""></div>
                 <div>
-                  <h3>You scored&nbsp</h3><h3 id="score"></h3><h3 id="score">&nbsppoints!</h3>
+                  <h3>You scored&nbsp</h3><h3 id="score"></h3><h3>&nbsppoints!</h3>
                 </div>
                 <div>
                   <button id="play-again" class="btn btn-secondary m-3 d-none">Play again</button>

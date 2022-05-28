@@ -23,3 +23,10 @@
 #number-limit-range{
   width:200px;
 }
+#clock {
+  font-size: 2em;
+}
+#question{
+  font-size: 30px;
+  color: rgb(64, 206, 245);
+}
