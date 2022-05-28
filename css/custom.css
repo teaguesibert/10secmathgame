@@ -1,15 +1,14 @@
 .card {
+  margin-top: 20px;
   padding: 25px;
   margin-bottom: 20px;
   border: initial;
   background: #fff;
-  border-radius: calc(.15rem - 1px);
-  box-shadow: 0 1px 15px rgba(0,0,0,0.04), 0 1px 6px rgba(0,0,0,0.04);
 }
 .op-text{
   font-size: 2em;
 }
-#game-presentation{
+#game-information{
   background-color: rgba(64, 123, 179, 0.59);
 }
 #game-options{
@@ -17,4 +16,10 @@
 }
 #results{
   background-color: rgba(200, 245, 109, 0.427);
+}
+#game-over-img{
+  max-height: 300px;
+}
+#number-limit-range{
+  width:200px;
 }
