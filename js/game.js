@@ -25,6 +25,10 @@ let operator = "";
 let counter = 10;
 let scoreAchieved = 0;
 
+var ding = new Audio("sound/ding.mp3"); // buffers automatically when created
+var clap = new Audio("sound/clap.mp3");
+var wrong = new Audio("sound/wrong.mp3")
+
 function generateRandomNumber(upperLimit) {
   let randomNum = Math.floor(Math.random() * (upperLimit) + 1);
   return randomNum;
@@ -76,6 +80,7 @@ function timer() {
     results.classList.remove('d-none');
     counter = 10;
     score.innerHTML = scoreAchieved;
+    clap.play("clap.mp3");
     }
   }
   var timeoutId = setTimeout(callbackFunction)
@@ -94,11 +99,19 @@ function getResult() {
 }
 
 function addSecond() {
-  counter += 1;
+  if(upperLimit.value == 10) {
+    counter += 1;
+  } else if(upperLimit.value == 20) {
+    counter += 2;
+  } else {
+    counter += 4;
+  }
 }
 
 function checkResult(upperLimit) {
   if(answer.value == getResult()) {
+    ding.currentTime = 0;
+    ding.play();
     answer.value = "";
     addSecond(upperLimit)
     setScore()
@@ -107,6 +120,8 @@ function checkResult(upperLimit) {
     answer.style.color = "black";
   } else {
     answer.style.color = "red";
+    wrong.currentTime = 0;
+    wrong.play();
   }
 }
 
